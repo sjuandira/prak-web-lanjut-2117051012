@@ -7,7 +7,7 @@
 <body>
 <div class="content">
 <img src="<?php echo base_url('assets/img/SalsabilaJuandira.jpg'); ?>" alt="">
-<h1>Salsabila Juandira</h1>
+<h1><?= $nama ?></h1>
 <p>Perkenakalkan nama saya <?= $nama ?> dengan NPM <?= $npm ?> dari kelas <?= $kelas ?></p>
 </body>
 </html>

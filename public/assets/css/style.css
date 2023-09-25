@@ -36,13 +36,14 @@ img{
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-    margin-top: 50px;;
+    margin-top: 40px;
 }
 .container h1{
     display: flex;
     justify-content: center;
-    color: #435334;;
+    color: #435334;
     font-weight: 700;
+    margin-top: -35px;
 }
 .input{
     width: 400px;
@@ -59,7 +60,21 @@ form label{
     padding: 5px;
     color:#435334;
 }
-input{
+/* input{
+    width: 100%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #435334;
+} */
+
+.form-container{
+    margin-bottom: 15px;
+}
+
+.form-control{
     width: 100%;
     margin: 2px;
     border: none;
@@ -78,14 +93,14 @@ hr{
 button{
     border: none;
     outline: none;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     padding: 8px;
     width: 252px;
     color: #fff;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: 5px;
     background-color: #435334;
 }
