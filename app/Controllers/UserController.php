@@ -67,7 +67,13 @@ class UserController extends BaseController
         return view('create_user', $data);
     }
     public function store(){
+        $path = 'assets/uploads/img/';
+        $foto =$this->request->getFile('foto');
+        $name = $foto->getRandomName();
 
+        if($foto->move($path, $name)){
+            $foto= base_url($path . '/' . $name);
+        }
         $kelasModel = new KelasModel();
         if($this->request->getVar('kelas') != ''){
             $kelas_select = $kelasModel->where('id', $this->request->getVar('kelas'))->first();
@@ -91,6 +97,7 @@ class UserController extends BaseController
             'nama' => $this->request->getVar('nama'),
             'npm' => $this->request->getVar('npm'),
             'id_kelas' => $this->request->getVar('kelas'),
+            'foto'  =>$foto
         ]);
 
         $data=[
@@ -99,6 +106,14 @@ class UserController extends BaseController
             'kelas'=>$nama_kelas,
             'npm'=>$this->request->getVar('npm'),
         ];
-        return view ('profile', $data);
+        return redirect()->to('/user');
+    }
+    public function show($id){
+        $user = $this->userModel->getUser($id);
+        $data = [
+            'title' => 'Profile',
+            'user' => $user,
+        ];
+        return view('profile', $data);
     }
 }
