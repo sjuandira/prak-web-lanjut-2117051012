@@ -31,7 +31,14 @@
             
             <td><a type="button" class="btn btn-primary btn-sm" href="<?= base_url('user/'. $key['id']
             )?>">Detail</a>
-                <a type="button" class="btn btn-danger btn-sm" ?>Delete</a>
+            <a type="button" class="btn btn-warning btn-sm" href="<?= base_url('user/'. $key['id'].'/edit'
+            )?>">Edit</a>
+                <form action="<?=base_url("user/" .  $key['id'])?>" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <?=csrf_field()?>
+                <button type="submit"class="btn btn-danger btn-sm">Delete</button>
+                <!-- <a type="button" class="btn btn-danger btn-sm" ?>Delete</a> -->
+                </form>
             </td>
             </tr>
         </tbody>
