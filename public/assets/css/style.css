@@ -54,9 +54,21 @@ img{
     width: 400px;
     border-color: black;
 }
-form{
+.create-user{
     width: 250px;
     margin: 60px auto;
+}
+.create-kelas{
+    width: 250px;
+    margin: 60px auto;
+}
+.list-kelas{
+    width: 70%;
+    margin-left: 140px;
+}
+.head h1{
+    align-items: center;
+    margin-left: 160px;
 }
 form label{
     display: block;
@@ -95,7 +107,7 @@ hr{
     margin-left: 15px;
     border-top: 2px solid #435334 ;
 }
-button{
+.btn-kirim{
     border: none;
     outline: none;
     /* margin-left: 10px; */
@@ -163,5 +175,8 @@ td {
     text-align: center;  
     margin-top: 10px;
     
+}
+.btn-delete{
+    display: inline-block;
 }
 
