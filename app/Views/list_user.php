@@ -4,10 +4,9 @@
 <?php $no=1; ?>
     <!-- <p>ini halaman list user</p> -->
     <div class="table-content">
-        <div class="head">
+        <div class="head-user">
             <h1>Data User</h1>          
-        </div>        
-        <a type="button" class="btn btn-primary btn-sm" href="/user/create">Tambah Data</a>        
+        </div>                
     <table class="table table-striped table-hover">
         <thead>
             <tr>
@@ -46,6 +45,7 @@
         } 
         ?>
     </table>
+    <a type="button" class="btn btn-primary btn-sm" href="/user/create">Tambah Data</a>        
     </div>
     
 <?= $this->endSection ('content') ?>

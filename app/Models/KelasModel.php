@@ -6,12 +6,23 @@ use CodeIgniter\Model;
 
 class KelasModel extends Model
 {
-    public function getKelas(){
+    public function getKelas($id= null){
+        if($id!= null){
+            return $this->find($id);
+        }
         return $this->findAll();
+        
     }
     public function saveKelas($data){
         $this->insert($data);
     }
+    public function updateKelas($data, $id){
+        return $this->update($data, $id);
+    }
+    public function deleteKelas($id){
+        return $this->delete($id);
+    }
+
     protected $DBGroup          = 'default';
     protected $table            = 'kelas';
     protected $primaryKey       = 'id';
