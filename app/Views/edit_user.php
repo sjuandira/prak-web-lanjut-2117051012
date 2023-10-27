@@ -3,7 +3,7 @@
     <?php $nama_kelas = session()->getFlashdata('nama_kelas');  ?>
     <div class="container">
         <div class="input">
-        <form action="<?= base_url('/user/'.$user['id']) ?>" method="POST" enctype="multipart/form-data">
+        <form class="edit-user" action="<?= base_url('/user/'.$user['id']) ?>" method="POST" enctype="multipart/form-data">
             <h1>Selamat Datang</h1><hr>
 
             <?= csrf_field() ?>
@@ -55,7 +55,7 @@
                 <input type="file" class="form-control" id="foto" name="foto" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
                 <!-- <button class="btn btn-outline-secondary" type="button" id="upload">Button</button> -->
                     </div>
-            <button type="submit">Kirim</button>        
+            <button class="btn-kirim" type="submit">Kirim</button>        
         </form>
         </div>
     </div>

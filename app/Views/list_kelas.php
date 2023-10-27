@@ -2,9 +2,10 @@
 
 <?= $this->section('content') ?>
 <?php $no=1; ?>
+
     <!-- <p>ini halaman list user</p> -->    
     <div class="table-content">
-        <div class="head">
+        <div class="head-kelas">
             <h1>Daftar Kelas</h1>          
         </div>       
         <div class="list-kelas">         
@@ -25,7 +26,7 @@
             <td><?= $key['nama_kelas']?></td>            
             
             <td>
-            <a type="button" class="btn btn-warning btn-sm" href="<?= base_url('kelas/'. $key['id'].'/edit'
+            <a type="button" class="btn btn-primary btn-sm" href="<?= base_url('kelas/'. $key['id'].'/edit'
             )?>">Edit</a>
                 <form class="btn-delete" action="<?=base_url("kelas/" .  $key['id'])?>" method="POST" >
                 <input type="hidden" name="_method" value="DELETE">
